@@ -1,0 +1,5 @@
+name: Lotto
+main: achedon\loto\Main
+version: 1.0.0
+author: Achedon12
+api: [4.0.0]
