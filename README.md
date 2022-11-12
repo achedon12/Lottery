@@ -1,0 +1,2 @@
+# Lottery
+ lottery pocketmine plugin
