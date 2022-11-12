@@ -11,8 +11,7 @@ class Loto{
     private int $timer;
 
     private int $sum;
-
-    /** @var Player[] $participants  */
+    
     private array $participants = [];
 
     /**
