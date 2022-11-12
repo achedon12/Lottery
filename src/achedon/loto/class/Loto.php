@@ -21,8 +21,7 @@ class Loto{
      */
     public function __construct(int $timer, int $sum)
     {
-        //$this->timer = $timer;
-        $this->timer = 20;
+        $this->timer = $timer;
         $this->sum = $sum;
     }
 
