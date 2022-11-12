@@ -24,6 +24,9 @@ class CustomFormResponse
         $this->elements = $elements;
     }
 
+    /**
+     * @return Dropdown
+     */
     public function getDropdown(): Dropdown
     {
         return $this->tryGet(Dropdown::class);
@@ -46,31 +49,49 @@ class CustomFormResponse
         return $element;
     }
 
+    /**
+     * @return Input
+     */
     public function getInput(): Input
     {
         return $this->tryGet(Input::class);
     }
 
+    /**
+     * @return Slider
+     */
     public function getSlider(): Slider
     {
         return $this->tryGet(Slider::class);
     }
 
+    /**
+     * @return StepSlider
+     */
     public function getStepSlider(): StepSlider
     {
         return $this->tryGet(StepSlider::class);
     }
 
+    /**
+     * @return Toggle
+     */
     public function getToggle(): Toggle
     {
         return $this->tryGet(Toggle::class);
     }
 
+    /**
+     * @return Element[]
+     */
     public function getElements(): array
     {
         return $this->elements;
     }
 
+    /**
+     * @return array
+     */
     public function getValues(): array
     {
         $values = [];
