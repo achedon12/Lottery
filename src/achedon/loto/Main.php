@@ -6,7 +6,6 @@ use achedon\loto\class\Loto;
 use achedon\loto\commands\LotoCommand;
 use achedon\loto\tasks\LotoTask;
 use cooldogedev\BedrockEconomy\api\BedrockEconomyAPI;
-use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\Server;
 use pocketmine\utils\Config;
@@ -50,7 +49,7 @@ class Main extends PluginBase{
         if($this->loto != null){
             foreach($this->loto->getParticipants() as $player){
                 $player = Server::getInstance()->getPlayerByPrefix($player);
-                BedrockEconomyAPI::legacy()->addToPlayerBalance($player->getName(),(int)Main::getInstance()->loto->getParticipants()[$player->getName()]);
+                BedrockEconomyAPI::legacy()->addToPlayerBalance($player->getName(), Main::getInstance()->loto->getParticipants()[$player->getName()]);
             }
         }
     }

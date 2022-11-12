@@ -11,7 +11,7 @@ class Loto{
     private int $timer;
 
     private int $sum;
-    
+
     private array $participants = [];
 
     /**
@@ -56,9 +56,6 @@ class Loto{
         $this->sum += $sum;
     }
 
-    /**
-     * @return Player[]
-     */
     public function getParticipants(): array
     {
         return $this->participants;
@@ -78,7 +75,7 @@ class Loto{
      * @param Player $player
      */
     public function removeParticipant(Player $player): void{
-        BedrockEconomyAPI::legacy()->addToPlayerBalance($player->getName(),(int)Main::getInstance()->loto->getParticipants()[$player->getName()]);
+        BedrockEconomyAPI::legacy()->addToPlayerBalance($player->getName(),Main::getInstance()->loto->getParticipants()[$player->getName()]);
         unset(Main::getInstance()->loto->getParticipants()[$player->getName()]);
     }
 }
